@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Create account | SmartQueue</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/">Smart<span>Queue</span></a>
+      <a class="topbar-link" href="/">Already have an account? Sign in</a>
+    </header>
+    <main class="shell create-user-shell">
+      <section class="create-user-card" aria-labelledby="create-user-title">
+        <div>
+          <p class="eyebrow">Create your SmartQueue account</p>
+          <h1 id="create-user-title">Get started in a few moments.</h1>
+          <p class="muted">
+            Create an account to book visits, see your place in line, and keep
+            your queue history in one place.
+          </p>
+        </div>
+        <form id="create-user-form">
+          <div id="form-message" class="notice hidden" role="alert"></div>
+          <label
+            >Email address<input
+              name="email"
+              type="email"
+              autocomplete="email"
+              maxlength="254"
+              required
+              autofocus
+          /></label>
+          <label
+            >Password
+            <small
+              >Use 8–72 characters with uppercase, lowercase, number, and
+              symbol. Spaces are not allowed.</small
+            ><input
+              name="password"
+              type="password"
+              autocomplete="new-password"
+              minlength="8"
+              maxlength="72"
+              required
+          /></label>
+          <label
+            >Confirm password<input
+              name="confirmPassword"
+              type="password"
+              autocomplete="new-password"
+              minlength="8"
+              maxlength="72"
+              required
+          /></label>
+          <button class="wide" type="submit">Create account</button>
+          <p class="form-footer">Already registered? <a href="/">Sign in</a></p>
+        </form>
+      </section>
+    </main>
+    <script src="/create-user.js" defer></script>
+  </body>
+</html>

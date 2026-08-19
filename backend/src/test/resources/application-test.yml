@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:smartqueue;MODE=PostgreSQL;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  flyway:
+    enabled: true
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+smartqueue:
+  security:
+    jwt:
+      secret: test-only-secret-key-that-is-long-enough-for-hmac-sha-256
+      expiration: 15d
+      qr-expiration: 5m

@@ -1,0 +1,12 @@
+/* Token history belongs to citizens; officers and administrators do not book tokens. */
+#content tr:has(select option[value="OFFICER"]:checked) button[data-user] {
+  display: none;
+}
+#content button.enable-user {
+  background: var(--good);
+  color: var(--white);
+}
+#content button[data-user-toggle][data-enable="true"] {
+  background: var(--good);
+  color: var(--white);
+}

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SmartQueue</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/user-directory.css?v=2" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/">Smart<span>Queue</span></a>
+      <div id="session" class="session hidden">
+        <span id="identity"></span
+        ><button class="ghost" id="logout">Sign out</button>
+      </div>
+    </header>
+    <main class="shell">
+      <section id="auth-view" class="auth-card">
+        <div
+          id="auth-notice"
+          class="notice notice-in-grid hidden"
+          role="alert"
+        ></div>
+        <div>
+          <p class="eyebrow">Digital service queue</p>
+          <h1>Skip the line, not the service.</h1>
+          <p class="muted">
+            Book and track a visit, or sign in to operate your counter.
+          </p>
+        </div>
+        <div class="auth-forms">
+          <form id="login-form">
+            <h2>Sign in</h2>
+            <label
+              >Email<input
+                name="email"
+                type="email"
+                autocomplete="email"
+                required /></label
+            ><label
+              >Password<input
+                name="password"
+                type="password"
+                autocomplete="current-password"
+                required /></label
+            ><button>Sign in</button
+            ><button type="button" class="auth-link" id="forgot-password">
+              Forgot password?
+            </button>
+          </form>
+          <section class="signup-card">
+            <h2>New citizen?</h2>
+            <p class="muted">
+              Create an account to book a visit and track your place in the
+              queue.
+            </p>
+            <a class="signup-link" href="/create-user"
+              >Create citizen account</a
+            >
+          </section>
+        </div>
+      </section>
+      <section id="app-view" class="hidden">
+        <nav id="nav" class="tabs"></nav>
+        <div id="notice" class="notice hidden" role="alert"></div>
+        <div id="content"></div>
+      </section>
+    </main>
+    <template id="loading"><div class="loading">Loading…</div></template>
+    <script src="/app.js" defer></script>
+    <script src="/user-directory.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+target/
+**/target/
+bin/
+obj/
+**/bin/
+**/obj/
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+.vscode/
+.env
+
+/.metadata/
+node_modules/
+playwright-report/
+test-results/
+.playwright-artifacts/
+
+# Locally generated deliverables and temporary build output
+output/
+tmp/

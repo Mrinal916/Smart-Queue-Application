@@ -1,0 +1,4 @@
+ALTER TABLE offices ADD COLUMN category VARCHAR(30) NOT NULL DEFAULT 'OTHER';
+UPDATE offices SET category = 'HOSPITAL' WHERE UPPER(code) LIKE '%HOSPITAL%' OR UPPER(name) LIKE '%HOSPITAL%';
+UPDATE offices SET category = 'RTO' WHERE UPPER(code) LIKE '%RTO%' OR UPPER(name) LIKE '%RTO%';
+ALTER TABLE tokens ADD COLUMN appointment_time TIME;
